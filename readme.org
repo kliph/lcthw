@@ -1,0 +1,13 @@
+* Learn C the Hard Way
+[[http://c.learncodethehardway.org/book/]]
+** Exercise 1
+*** Compiler warnings
+To build a file with the all compiler warnings on use:
+
+#+BEGIN_SRC sh
+  CFLAGS="-Wall" make ex1
+
+#+END_SRC
+** Exercise 2
+
+*** Using Make
