@@ -11,3 +11,23 @@ To build a file with the all compiler warnings on use:
 ** Exercise 2
 
 *** Using Make
+[[http://mrbook.org/tutorials/make/]]
+
+**** A very simple Makefile
+
+#+BEGIN_EXAMPLE
+CFLAGS=-Wall -g
+
+clean:
+     rm -f ex1 # Make sure it's a tab
+
+#+END_EXAMPLE
+
+** Exercise 3
+*** Online research
+All of the standard =printf= C escape codes:
+[[http://www.phys.unsw.edu.au/~mcba/phys2020/notes/escape.html]]
+
+
+All of the standard =printf= C format strings:
+[[http://www.cprogramming.com/tutorial/printf-format-strings.html]]
