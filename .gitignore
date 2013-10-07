@@ -1,5 +1,8 @@
 *~*
 
+# Mac Debug Symbol files
+*.dSYM/
+
 # Object files
 *.o
 
