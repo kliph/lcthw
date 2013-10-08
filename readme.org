@@ -80,3 +80,13 @@ fixes valgrind.
 In =c= functions return an =int= and accept two parameters: =int argc=
 for the argument count and an array of string arguments
 =char *argv[]=.
+** Exercise 6
+"You'll notice that C makes a distinction between single-quote for
+=char= and double-quote for =char[]= or strings."
+
+And that's silly, yo.
+
+*** Char for single characters
+Declared with =char= and written in ' single quotes
+*** Char for strings
+Declared with =char= and written in " double quotes.
