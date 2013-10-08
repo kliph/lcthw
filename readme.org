@@ -31,3 +31,35 @@ All of the standard =printf= C escape codes:
 
 All of the standard =printf= C format strings:
 [[http://www.cprogramming.com/tutorial/printf-format-strings.html]]
+** Exercise 4
+*** Installing Valgrind
+**** Valgrind error on Snow Leopard
+
+I encountered a problem using valgrind version =valgrind-3.8.1=
+installed via macports on Mac OS X 10.6.8.
+
+A fix can be found at:
+[[https://bugs.kde.org/show_bug.cgi?id%3D262390#c16][https://bugs.kde.org/show_bug.cgi?id=262390#c16]]
+
+Executing:
+#+BEGIN_SRC sh
+  sudo /usr/lcoal/hermes/bin/hermesctl unload
+
+#+END_SRC
+
+fixes valgrind.
+
+#+BEGIN_SRC sh
+  valgrind -v ./ex4
+  valgrind: mmap-FIXED(0x100000000, 4096) failed in UME (load_segment1).
+
+   ,*sudo /usr/local/hermes/bin/hermesctl unload
+
+  HermesAudio unload failed: not loaded
+
+  valgrind -v ./ex4
+  ==931== Memcheck, a memory error detector
+  ==931== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+  ...
+
+#+END_SRC
