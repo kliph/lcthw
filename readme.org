@@ -90,3 +90,4 @@ And that's silly, yo.
 Declared with =char= and written in ' single quotes
 *** Char for strings
 Declared with =char= and written in " double quotes.
+** Exercise 7
