@@ -91,3 +91,42 @@ Declared with =char= and written in ' single quotes
 *** Char for strings
 Declared with =char= and written in " double quotes.
 ** Exercise 7
+** Exercise 8
+The =sizeof()= function returns the size of a thing in bytes.
+*** String quirks in C
+One tricky thing about C is that it stores a null character =\0= at
+the end of all strings.  =printf()= is "smart" enough to know not to
+print =\0=.  (I'm not even sure a terminal can display the null
+character!)
+
+In other words, C stores strings as an array of bytes terminated by
+the null character =\0=.  See:
+[[https://en.wikipedia.org/wiki/Null-terminated_string]].
+
+Emacs eshell writes the null character =\0= as =^@=, at least in the
+output from =valgrind=.
+
+*** Sixteen.c
+A diversion looking at how 16-bit integers are stored in C.  Not sure
+about the problem I'm seeing when adding 1 to an =int16_t= in a
+=printf()= statement:
+
+#+BEGIN_SRC c
+    int16_t n1 = 32767;
+    int16_t n2 = n1 + 1;
+    printf("The size of an int16_t is %ld\n", sizeof(int16_t));
+    printf("%d\n", n1);
+    printf("Since it's signed, numbers above halfway underflow\n");
+    printf("So one more and it becomes: %d\n", n2);
+    printf("NOTE: If you do the addition without specifically\n");
+    printf("casting the int as int16_t, it looks like C\n");
+    printf("automatically makes it a larger int? E.g.: %d\n", n1 + 1);
+
+
+#+END_SRC
+
+Maybe it has something to do with =printf()= itself or the =%d= flag?
+** Exercise 9
+Nice quote that the source of a lot of C bugs is using strings.  There
+will be a workaround for using C strings later on.
+** Exercise 10
