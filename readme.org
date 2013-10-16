@@ -130,3 +130,9 @@ Maybe it has something to do with =printf()= itself or the =%d= flag?
 Nice quote that the source of a lot of C bugs is using strings.  There
 will be a workaround for using C strings later on.
 ** Exercise 10
+It seems like there's a maximum of 99,999 arguments in C--plenty.
+Running =valgrind ./ex10= with 100,000 arguments does not print any
+output.
+
+Trying to replicate this experiment with 4,294,967,296 arguments hard
+locked the computer for ≈ 15 minutes before I shut it down.
