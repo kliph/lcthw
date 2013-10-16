@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
-  int i = 0;
+  uint16_t i = 0;
 
   /* go through each string in argv.  Skipping argv[0] because it
    contains the program's name. */
